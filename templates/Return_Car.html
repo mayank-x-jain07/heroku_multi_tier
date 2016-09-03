@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rental Bookings!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	<h2 align='center'>Enter Rental Id For Returning the Vehicle!</h2>
+      
+	<br />
+	<br />
+      <form action="/return_car" method="post" align='center'>
+		<br />
+		<br />
+        <div>Rental Id <input type="text" name="rent_id" style="border: 1px solid black"></div>
+		<br />
+		<br />
+		<div>Customer Id <input type="text" name="cust_id" style="border: 1px solid black"></div>
+		
+		<br />	
+		<br />
+		<div>Select the Booking Type</div>
+		<br />
+		<input type="radio" name="booking_type" value="daily" checked>Daily
+		<input type="radio" name="booking_type" value="weekly">   Weekly
+		<br />
+		<br />
+		<br />	
+		<br />
+        <div><input type="submit" value="Return Vehicle"></div>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekly Rental Bookings!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	<h2 align='center'>Enter Weekly Car Rental Details!</h2>
+      
+	<br />
+	<br />
+      <form action="/weekly_car" method="post" align='center'>
+		<br />
+        
+		<br />
+		<div>Customer Id <input type="text" name="cust_id" style="border: 1px solid black"></div>
+		<br />	
+		<br />
+		<div>Pickup Location  <select name="location">
+		<option value="Arlington">Arlington</option>
+		</select></div>
+		<br />
+		<br />
+		<div>Vehicle Type  <select name="type">
+		<option value="Compact">Compact</option>
+		<option value="Medium">Medium</option>
+		<option value="Large">Large</option>
+		<option value="SUV">SUV</option>
+		<option value="Truck">Truck</option>
+		<option value="Van">Van</option>
+		</select></div>
+		<br />
+		<br />
+		<div>Vehicle Name<input type="text" name="model" style="border: 1px solid black"></div>
+		<br />	
+		<br />
+		<div>Number of Weeks<input type="text" name="weeks" style="border: 1px solid black"></div>
+		<br />	
+		<br />
+		<div>Start Date<input type="date" name="start_date" min="2015-08-01"></div>
+		<br />	
+		<br />
+        <div><input type="submit" value="Rent This Car"></div>
+      </form>
+  </body>
+</html>

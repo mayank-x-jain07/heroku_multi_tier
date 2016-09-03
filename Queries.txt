@@ -1,0 +1,96 @@
+1.	Customer
+
+Create Table Customer(Cust_Id  int(10) AUTO_INCREMENT,Name VARCHAR(20),Contact_Number int(15),PRIMARY KEY (Cust_Id));
+
+2.	Car_Details
+
+Create Table Car_Details(
+Vehicle_Id  int(10) AUTO_INCREMENT,
+Model VARCHAR(20),
+Year DATE,
+Type VARCHAR(20),
+AVAILABLE VARCHAR(1),
+PRIMARY KEY (Vehicle_Id),
+FOREIGN KEY (Type) REFERENCES Vehicle_Type(Type)
+);
+
+3.	Vehicle_Type
+
+Create Table Vehicle_Type(
+Type VARCHAR(20),
+Daily_Rate int(4),
+Weekly_Rate int(4),
+CONSTRAINT Vehicle_Type_pk PRIMARY KEY (Type)
+);
+
+4.	Daily_Rental
+
+Create Table Daily_Rental(
+Rent_Id  int(10) AUTO_INCREMENT,
+Cust_Id  int(10),
+Vehicle_Id  int(10),
+Location VARCHAR(20),
+No_Of_Days int(4),
+Start_Date DATE,
+Return_Date DATE,
+Amount_Due FLOAT(9,3),
+Booking_Status VARCHAR(10),
+PRIMARY KEY (Rent_Id),
+FOREIGN KEY (Vehicle_Id) REFERENCES Car_Details(Vehicle_Id),
+FOREIGN KEY (Cust_Id) REFERENCES Customer(Cust_Id)
+);
+
+
+
+5.	Weekly_Rental
+
+Create Table Weekly_Rental(
+Rent_Id  int(10),
+Cust_Id  int(10),
+Vehicle_Id  int(10),
+Location VARCHAR(20),
+No_Of_Weeks int(4),
+Start_Date DATE,
+Return_Date DATE,
+Amount_Due float(10,3),
+Booking_Status VARCHAR(10),
+PRIMARY KEY (Rent_Id),
+FOREIGN KEY (Vehicle_Id) REFERENCES Car_Details(Vehicle_Id),
+CONSTRAINT fk_Weekly_Rental_cust FOREIGN KEY (Cust_Id) REFERENCES Customer(Cust_Id)
+);
+
+6.	Give_Details
+
+Create Table Give_Details(
+Rent_Id  int(10),
+Cust_Id  int(10),
+Vehicle_Id  int(10),
+Type VARCHAR(20),
+PRIMARY KEY (Rent_Id),
+FOREIGN KEY (Rent_Id) REFERENCES Daily_Rental(Rent_Id),
+FOREIGN KEY (Rent_Id) REFERENCES Weekly_Rental(Rent_Id)
+);
+
+
+Create Table Weekly_Rental(
+Rent_Id  int(10),
+Cust_Id  int(10),
+Vehicle_Id  int(10),
+Location VARCHAR(20),
+No_Of_Weeks int(4),
+Start_Date DATE,
+Return_Date DATE,
+Amount_Due float(10,3),
+Booking_Status VARCHAR(10),
+PRIMARY KEY (Rent_Id),
+FOREIGN KEY (Vehicle_Id) REFERENCES Car_Details(Vehicle_Id),
+CONSTRAINT fk_Weekly_Rental_cust FOREIGN KEY (Cust_Id) REFERENCES Customer(Cust_Id)
+);
+
+Queries:
+
+select * from Customer;
+select * from Car_Details;
+select * from Vehicle_Type;
+select Rent_Id,Cust_Id,No_Of_Days,Amount_Due,Booking_Status from Daily_Rental;
+select Rent_Id,Cust_Id,No_Of_Weeks,Amount_Due,Booking_Status from Weekly_Rental;

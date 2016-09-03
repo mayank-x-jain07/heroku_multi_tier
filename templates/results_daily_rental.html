@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Results Daily Rental!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	
+	<br />
+	<br />
+	<form action="/back" align='center'>
+        <div><input type="submit" value="Back To Main Page" align='center' ></div>
+      </form>
+	  <br />
+	<br />
+	<h2 align='center'>Daily Rental Booking Details..</h2>
+      <table border="1" style="border: 1px solid black" align="center">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #CCFFCC; margin: 5px">Cust id</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Pickup Location</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Car Type</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Car Name</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Number of Days</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Start Date</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Return Date</th>
+          </tr>
+          
+             <tr>
+               <td>{{ my_res[0] }}</td>
+               <td>{{ my_res[1] }}</td>
+               <td>{{ my_res[2] }}</td>
+			   <td>{{ my_res[3] }}</td>
+               <td>{{ my_res[4] }}</td>
+               <td>{{ my_res[5] }}</td>
+			   <td>{{ my_res[6] }}</td>
+             </tr>
+    
+        </tbody>
+      </table>
+      <br />
+	  <h2 align='center'>Daily Rental Bill Details..</h2>
+	  <table border="1" style="border: 1px solid black" align="center">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #CCFFCC; margin: 5px">Rental Id</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Cust Id</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Car Name</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Total Amount Due</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Rental Status</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Booking</th>
+          </tr>
+          
+             <tr>
+               <td>{{ my_res1[3] }}</td>
+               <td>{{ my_res1[0] }}</td>
+               <td>{{ my_res1[1] }}</td>
+			   <td>{{ my_res1[2] }}</td>
+			   <td>{{ my_res1[4] }}</td>
+			   <td>{{ my_res1[5] }}</td>
+             </tr>
+    
+        </tbody>
+      </table>
+  </body>
+</html>

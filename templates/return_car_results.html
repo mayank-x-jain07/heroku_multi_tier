@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Return Car!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	<br />
+	<br />
+	<h2 align='center'>Vehicle Successfully Returned!!</h2>
+	
+	<br />
+	<br />
+	  <h2 align='center'>Final Bill Details..</h2>
+	  <table border="1" style="border: 1px solid black" align="center">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #CCFFCC; margin: 5px">Rental Id</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Cust Id</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Final Amount Due</th>
+			<th style="background-color: #CCFFCC; margin: 5px">Rental Status</th>
+          </tr>
+          
+             <tr>
+               <td>{{ my_res[0] }}</td>
+               <td>{{ my_res[1] }}</td>
+               <td>{{ my_res[2] }}</td>
+			   <td>{{ my_res[3] }}</td>
+             </tr>
+    
+        </tbody>
+      </table>
+	<br />
+	<br />
+	<form action="/back" align='center'>
+        <div><input type="submit" value="Return to Query Page" align='center' ></div>
+      </form>
+  </body>
+</html>

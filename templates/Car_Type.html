@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Type!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	<h2 align='center'>Enter Car Types!</h2>
+      
+	<br />
+	<br />
+      <form action="/type" method="post" align='center'>
+		
+		<div>Select the Operation  </div>
+		<br />
+		<input type="radio" name="operation" value="new" checked>New
+		<input type="radio" name="operation" value="update">   Update
+		<br />
+		<br />
+		<br />
+        <div>Vehicle Type  <select name="type">
+  <option value="Compact">Compact</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+  <option value="SUV">SUV</option>
+  <option value="Truck">Truck</option>
+  <option value="Van">Van</option>
+</select></div>
+		<br />
+		<div>      	Daily Rate  <input type="text" name="daily_rate" style="border: 1px solid black"></div>
+		<br />
+		<br />
+		<div>Weekly Rate  <input type="text" name="weekly_rate" style="border: 1px solid black"></div>
+		<br />
+		<br />
+        <div><input type="submit" value="Submit Vehicle Type"></div>
+      </form>
+  </body>
+</html>

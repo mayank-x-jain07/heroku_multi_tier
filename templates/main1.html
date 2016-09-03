@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Earthquake Data!</title>
+  </head>
+  <body>
+    <body><align="center">
+	<br />
+	<br />
+	<h2 align='center'>Displaying the Table Data For Week..</h2>
+	<br />
+	<br />
+	<form action="/back" align='center'>
+        <div><input type="submit" value="Back To Query Page" align='center' ></div>
+      </form>
+	  <br />
+	<br />
+      <table border="1" style="border: 1px solid black" align="center">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #CCFFCC; margin: 5px">Location</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Magnitude</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Type</th>
+          </tr>
+          {% for i in querylist %}
+             <tr>
+               <td>{{ i['loc'] }}</td>
+               <td>{{ i['mag'] }}</td>
+               <td>{{ i['count'] }}</td>
+             </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br />
+  </body>
+</html>
